@@ -5,3 +5,5 @@ Homestead.json
 .env
 .env.example
 npm-debug.log
+*.sublime-*
+config.codekit

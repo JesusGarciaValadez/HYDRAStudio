@@ -1,38 +1,7 @@
 "use strict";
 
-// Componente principal SimpleFilterableList
-
-var SimpleFilterableList = React.createClass({
-  displayName: "SimpleFilterableList",
-
-  // Define el estado inicial de la aplicación. Input del usuario = Ninguno
-  getInitialState: function () {
-    return {
-      userInput: ""
-    };
-  },
-  // Actualiza el estado de la aplicación de acuerdo al input del usuario.
-  updateUserInput: function (input) {
-    console.log('_________________');
-    console.log('User search input:');
-    console.log(input.target.value);
-    this.setState({ userInput: input.target.value });
-  },
-  // Define el markup del componente principal
-  // Cuando el usuario escribe algo, ejecuta la función updateUserInput
-  // Define el componente SimpleList con la url dada y el estado del input del usuario
-  render: function () {
-    return React.createElement(
-      "div",
-      null,
-      React.createElement("input", { type: "text", placeholder: "Filtrar...", onChange: this.updateUserInput }),
-      React.createElement(SimpleList, { url: this.props.url, userInput: this.state.userInput })
-    );
-  }
-});
-
 var SimpleList = React.createClass({
-  displayName: "SimpleList",
+  displayName: 'SimpleList',
 
   // Define el estado inicial del componente con el texto "Cargando ..."
   getInitialState: function () {
@@ -64,43 +33,39 @@ var SimpleList = React.createClass({
   // este momento esta vacío.
   render: function () {
     return React.createElement(
-      "span",
+      'span',
       null,
       React.createElement(
-        "p",
+        'p',
         null,
         React.createElement(
-          "strong",
+          'strong',
           null,
-          "Pasos para dominar un nuevo lenguaje de programación:"
+          'Pasos para dominar un nuevo lenguaje de programación:'
         )
       ),
-      React.createElement(SimpleListRow, { simpleList: this.state.simpleList, userInput: this.props.userInput })
+      React.createElement(SimpleListRow, { simpleList: this.state.simpleList })
     );
   }
 });
 
 var SimpleListRow = React.createClass({
-  displayName: "SimpleListRow",
+  displayName: 'SimpleListRow',
 
   render: function () {
     console.log('_________________');
     console.log('simpleList rows props:');
     console.log(this.props);
     var rows = this.props.simpleList;
-    var userInput = this.props.userInput;
     return React.createElement(
-      "ol",
+      'ol',
       null,
       rows.map(function (element) {
-        if (element.row.toLowerCase().search(userInput.toLowerCase()) > -1) {
-          console.log("userInput found in simpleList row: " + element.row);
-          return React.createElement(
-            "li",
-            null,
-            element.row
-          );
-        };
+        return React.createElement(
+          'li',
+          null,
+          element.row
+        );
       })
     );
   }
@@ -108,4 +73,4 @@ var SimpleListRow = React.createClass({
 
 // Renderea el componente principal pasando la url del archivo json externo y el id del elemento que contendrá el
 // componente
-React.render(React.createElement(SimpleFilterableList, { url: "js/simpleList_data.json" }), document.getElementById('simpleList'));
+React.render(React.createElement(SimpleList, { url: 'js/simpleList_data.json' }), document.getElementById('simpleList'));

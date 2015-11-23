@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::get( '/usuario', function () {
+  return view( 'usuario' );
+} );
+
+Route::get('/pokemon', function () {
+    return view('pokemon');
 });

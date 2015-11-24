@@ -377,6 +377,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/pokemon.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pokemon.js",
+		"outputAbbreviatedPath": "\/public\/js\/pokemon.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/public\/css\/styles.css": {
 		"fileType": 16,
 		"ignore": 0,

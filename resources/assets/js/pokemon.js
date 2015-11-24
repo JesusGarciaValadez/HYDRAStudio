@@ -2,11 +2,11 @@
  * Module Dependencies
  */
 import React from 'react';
-import PokeTable from '../js/PokeTable';
+import PokeTable from './PokeTable';
 
 /**
-* ReactJS/AngularJS Realtime Web Components Demo
-* Copyright 2015, by Cesar Anton Dorantes @reicek for http://platzi.com/blog
+* ReactJS Realtime Web Components Demo
+* Copyright 2015, by Jesús Antonio García Valadez
 **/
 /*
 * Note: Remove / in //* to disable that element

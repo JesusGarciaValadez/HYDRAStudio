@@ -6,6 +6,6 @@
     "babelify": "~7.2.0"
   },
   "scripts": {
-    "build": "browserify pokemon.js > ../../public/js/pokemon.js -t babelify"
+    "build": "browserify js/pokemon.js > ./../../public/js/pokemon.js -t babelify"
   }
 }

@@ -450,17 +450,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/reactApp.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/reactApp.js",
-		"outputAbbreviatedPath": "\/public\/js\/reactApp.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 2,
-		"syntaxCheckerStyle": 1
-		},
 	"\/readme.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,

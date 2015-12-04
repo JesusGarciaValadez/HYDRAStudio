@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pokeapp', function () {
+    return view('pokeapp');
+});
+
+Route::get('/pokehola', function () {
+    return view('pokehola');
+});

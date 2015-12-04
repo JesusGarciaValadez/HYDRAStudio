@@ -1,0 +1,8 @@
+.pokerow{
+  margin: 6px 0;
+}
+.avatar{
+  display: inline-block;
+  margin-right: 12px;
+  width: 50px;
+}

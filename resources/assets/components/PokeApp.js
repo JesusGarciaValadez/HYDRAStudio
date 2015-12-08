@@ -14,6 +14,11 @@ export default class PokeApp extends React.Component {
     super ( props );
     this.state    = { messages: [] };
     this.onGrowl  = this.onGrowl.bind( this );
+    this.pokemons = [
+      { number: 1, name: 'Bulbasaur' },
+      { number: 2, name: 'Ivysaur' },
+      { number: 3, name: 'Venusaur' }
+    ];
   }
   onGrowl ( name ) {
     let text      = `${name}, ${name}`;
@@ -23,14 +28,8 @@ export default class PokeApp extends React.Component {
     this.setState ( { messages: messages } );
   }
   render () {
-    let pokemons  = [
-      { number: 1, name: 'Bulbasaur' },
-      { number: 2, name: 'Ivysaur' },
-      { number: 3, name: 'Venusaur' }
-    ];
-
     return <div className="pokeapp">
-      <PokeTable pokemons={ pokemons } onGrowl={ this.onGrowl } />
+      <PokeTable pokemons={ this.pokemons } onGrowl={ this.onGrowl } />
       <PokeChat messages={ this.state.messages } />
     </div>
   }

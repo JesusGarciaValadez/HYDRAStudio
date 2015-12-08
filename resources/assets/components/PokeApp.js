@@ -20,13 +20,14 @@ export default class PokeApp extends React.Component {
       { number: 3, name: 'Venusaur' }
     ];
   }
+
   onGrowl ( name ) {
     let text      = `${name}, ${name}`;
-    let uid       = uid( );
-    this.state.messages.push( { id: uid, text: text } );
+    this.state.messages.push( { id: uid( ), text: text } );
     let messages  = this.state.messages;
     this.setState ( { messages: messages } );
   }
+
   render () {
     return <div className="pokeapp">
       <PokeTable pokemons={ this.pokemons } onGrowl={ this.onGrowl } />
